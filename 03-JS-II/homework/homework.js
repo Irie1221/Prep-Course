@@ -75,14 +75,14 @@ function colors(color) {
       return "This is blue";
       
     case "red":
-        return "This is red";
-       
-    case "green":
-          return "This is green";
+      return "This is red";
       
+    case "green":
+      return "This is green";
+     
     case "orange":
-            return "This is orange";
-           
+        return "This is orange";
+        
     default:
       return "Color not found"
   }
@@ -146,14 +146,14 @@ function operadoresLogicos(num1, num2, num3) {
   if (num1 > num2 && num1 > num3 && num1 >= 0) {
     return "Número 1 es mayor y positivo";
   }
-  else if (num1 < 0 && num2 < 0 && num3 < 0) {
+  else if (num1 < 0 || num2 < 0 || num3 < 0) {
     return "Hay negativos";
   }
   else if (num3 > num1 && num3 > num2) {
-    num3++;
-    return num3;
+  
+    return num3++;
   }
-  else if (num1 === 0 && num2 === 0 && num3 === 0) {
+  else if (num1 === 0 || num2 === 0 || num3 === 0) {
     return "Error";
   }
   else {
@@ -161,7 +161,7 @@ function operadoresLogicos(num1, num2, num3) {
   }
 }
 
-function esPrimo(numero) {
+function esPrimo(numero) { AAAAAAAAAAAAAAAAAAAAAAAAAAA
   // Devuelve "true" si "numero" es primo
   // De lo contrario devuelve "falso"
   // Pista: un número primo solo es divisible por sí mismo y por 1
@@ -170,11 +170,12 @@ function esPrimo(numero) {
   if (numero < 2) {
     return "falso";
   } else if (numero / numero === 1) {
-    return "true";
+    return true;
   } else if (numero / 1 === numero) {
-    return "true";
-  } else {
-    return "falso";
+    return true;
+  
+  }else {
+    return false;
   }
 
 
