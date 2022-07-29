@@ -4,7 +4,7 @@ function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
- return nombre.charAt[0].toUpperCase() + nombre.slice[1];
+ return nombre.charAt(0).toUpperCase() + nombre.slice(1);
   
 }
 
@@ -41,25 +41,25 @@ function forEach(array, cb) {
   });
 }
 
-function map(_array, _cb) {
+function map(array, cb) {
   // Crea un nuevo array
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
-  let newArray = _array.map(function(element){
-    return _cb(element);
+  let newArray = array.map(function(element){
+    return cb(element);
   });
   return newArray;
 
 
 }
 
-function filter(_array) {
+function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
-  let newArray = _array.filter(function(element) {
-    if (element.charAt(0) === "a");
+  let newArray = array.filter(function(element){
+    return element.charAt(0) === "a";
   })
   return newArray;
 }

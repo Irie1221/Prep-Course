@@ -6,14 +6,15 @@ function crearGato (nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
-  const obj =  {
+ var obj =  {
  nombre: nombre,
  edad: edad,
   meow: function(){
-    return "Meow";
+    return "Meow!";
   }
   }
   return obj;
+
 }
 
 function agregarPropiedad (objeto, property) {
@@ -43,12 +44,12 @@ let multy = objetoMisterioso.numeroMisterioso * 5;
   return multy;
 }
 
-function eliminarPropiedad (objeto, unaPropiedad) {
+function eliminarPropiedad (objeto, Propiedad) {
   // Elimina la propiedad de objeto cuyo nombre está pasado por el parametro unaPropiedad
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
-  delete objeto.unaPropiedad;
+  delete objeto[Propiedad];
   return objeto;
 }
 
@@ -68,7 +69,7 @@ function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-  if (usuario.hasOwnProperty(email)) {
+  if (usuario["email"]) {
     return true;
   }else {
     return false;
@@ -80,7 +81,7 @@ function tienePropiedad (objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (objeto.hasOwnProperty("propiedad")){
+  if (objeto[propiedad]){
     return true;
   } else{
     return false;
@@ -103,7 +104,7 @@ function actualizarPassword (usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
   // Devuelve el objeto
   // Tu código:
-  usuario[password] = "nuevaPassword";
+  usuario.password = nuevaPassword;
   return usuario;
 }
 
